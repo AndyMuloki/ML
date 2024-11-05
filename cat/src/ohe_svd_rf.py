@@ -20,7 +20,7 @@ def run(fold):
     for col in features:
         df.loc[:, col] = df[col].astype(str).fillna("NONE")
 
-        # get training data using folds
+    # get training data using folds
     df_train = df[df.kfold != fold].reset_index(drop=True)
 
     # get validation data using folds
